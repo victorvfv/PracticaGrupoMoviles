@@ -1,6 +1,8 @@
 package com.example.trabajogrupo;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +12,11 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private
+    private EditText PruebaWatcher;
+    private Button PruebaLongClik;
+    private ControladorKeyListener ctrK;
+    private ControladorLongCLick ctrL;
+    private ControladorWatcher ctrW;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,5 +28,13 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        iniciaComponentes();
+    }
+
+    private void iniciaComponentes() {
+        PruebaWatcher=findViewById(R.id.editText);
+        PruebaWatcher.addTextChangedListener();
+        PruebaLongClik=findViewById(R.id.button);
+        PruebaLongClik.setOnLongClickListener();
     }
 }
