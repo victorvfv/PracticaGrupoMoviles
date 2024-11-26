@@ -10,6 +10,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class ElementoGrafico extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
